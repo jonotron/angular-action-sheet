@@ -1,0 +1,21 @@
+{
+  "name": "angular-action-sheet",
+  "version": "0.0.1",
+  "description": "angular directive for sliding content out like a drawer",
+  "main": "angular-action-sheet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//jonotron/angular-action-sheet.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": {
+    "name": "Jonathan Bowers",
+    "email": "jonotron@gmail.com"
+  },
+  "license": "MIT"
+}
