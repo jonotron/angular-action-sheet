@@ -41,7 +41,7 @@ Just use the `jb-action-sheet` directive somewhere and add your content:
 </jb-action-sheet>
 ```
 
-**Note**: Currently this directive hacks a `.clipped` class to the body when
+**Note**: Currently this directive hacks a `.jbas-clipped` class to the body when
 the sheet is in the revealed state. This will be fixed sometime to be less
 hacky.
 
