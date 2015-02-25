@@ -14,10 +14,10 @@ function jbActionSheetDirective($document) {
       reveal: '=reveal',
       size: '='
     },
-    template: '<div class="mask" ng-class="reveal ? \'mask--revealed\' : \'mask--hidden\'"></div>' +
-      '<div class="sheet sheet--{{ size }}" ng-class="reveal ? \'sheet--revealed\' : \'sheet--hidden\'">' +
-      '<button type="button" class="sheet__close" ng-click="sheet.close()">X</button>' +
-      '<div class="sheet__restrict-y"><div class="sheet__restrict-x">' +
+    template: '<div class="jbas-mask" ng-class="reveal ? \'jbas-mask--revealed\' : \'jbas-mask--hidden\'"></div>' +
+      '<div class="jbas-sheet jbas-sheet--{{ size }}" ng-class="reveal ? \'jbas-sheet--revealed\' : \'jbas-sheet--hidden\'">' +
+      '<button type="button" class="jbas-sheet__close" ng-click="sheet.close()">X</button>' +
+      '<div class="jbas-sheet__restrict-y"><div class="jbas-sheet__restrict-x">' +
       '<ng-transclude></ng-transclude>' +
       '</div></div>' +
       '</div>',
@@ -45,7 +45,7 @@ function jbActionSheetDirective($document) {
       revealedSheets.splice(pos, 1);
     }
 
-    angular.element($document[0].body).toggleClass('clipped', revealedSheets.length >= 1);
-    angular.element($document[0].body).toggleClass('unclipped', revealedSheets.length == 0);
+    angular.element($document[0].body).toggleClass('jbas-clipped', revealedSheets.length >= 1);
+    angular.element($document[0].body).toggleClass('jbas-unclipped', revealedSheets.length == 0);
   }
 }
