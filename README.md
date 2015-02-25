@@ -36,7 +36,7 @@ You'll probably want the styles too (for now, just .scss is provided)
 Just use the `jb-action-sheet` directive somewhere and add your content:
 
 ```html
-<jb-action-sheet reveal="someboolean" on-close="callWhenClosed()" size="big">
+<jb-action-sheet reveal="someboolean" on-close="callWhenClosed()" size="'big'">
   <div>your content here</div>
 </jb-action-sheet>
 ```
