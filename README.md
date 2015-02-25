@@ -25,6 +25,12 @@ Add `jbActionSheet` to your module's dependencies
 angular.module('MyApp', ['jbActionSheet']);
 ```
 
+You'll probably want the styles too (for now, just .scss is provided)
+
+```scss
+@import "node_modules/angular-action-sheet/styles/sass/styles";
+```
+
 ## Usage
 
 Just use the `jb-action-sheet` directive somewhere and add your content:
