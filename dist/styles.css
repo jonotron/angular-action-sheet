@@ -1,4 +1,4 @@
-.mask {
+.jbas-mask {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
   height: 0%;
   background: rgba(0, 0, 0, 0.4); }
 
-.mask--hidden {
+.jbas-mask--hidden {
   opacity: 0;
   width: 0;
   height: 0;
@@ -17,7 +17,7 @@
   -o-transition: opacity 0.3s, height 0 0.3s, width 0 0.3s;
   transition: opacity 0.3s, height 0 0.3s, width 0 0.3s; }
 
-.mask--revealed {
+.jbas-mask--revealed {
   opacity: 1;
   width: 100%;
   height: 100%;
@@ -27,7 +27,7 @@
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s; }
 
-.sheet {
+.jbas-sheet {
   height: 100%;
   z-index: 1001;
   background: #FCFBF0;
@@ -41,35 +41,35 @@
   -o-transition: right 0.3s;
   transition: right 0.3s; }
 
-.sheet--big {
+.jbas-sheet--big {
   width: 80%; }
 
-.sheet--med {
+.jbas-sheet--med {
   width: 50%; }
 
-.sheet--small {
+.jbas-sheet--small {
   width: 25%; }
 
-.sheet--hidden {
+.jbas-sheet--hidden {
   right: -100%; }
 
-.sheet--revealed {
+.jbas-sheet--revealed {
   right: 0; }
 
-.sheet__restrict-y {
+.jbas-sheet__restrict-y {
   height: 100%;
   overflow-y: auto; }
 
-.sheet__restrict-x {
+.jbas-sheet__restrict-x {
   width: 100%;
   overflow-x: hidden; }
 
-.sheet__close {
+.jbas-sheet__close {
   position: absolute;
   width: 40px;
   height: 40px;
   left: -40px;
   top: 0; }
 
-body.clipped {
+body.jbas-clipped {
   overflow: hidden; }
