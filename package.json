@@ -17,5 +17,9 @@
     "name": "Jonathan Bowers",
     "email": "jonotron@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3"
+  }
 }
