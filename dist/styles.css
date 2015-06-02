@@ -34,7 +34,7 @@
   position: fixed;
   width: 25%;
   top: 0;
-  right: 0;
+  right: -100%;
   -webkit-transition: right 0.3s;
   -moz-transition: right 0.3s;
   -ms-transition: right 0.3s;
