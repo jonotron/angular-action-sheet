@@ -1,6 +1,6 @@
 {
   "name": "angular-action-sheet",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "angular directive for sliding content out like a drawer",
   "main": "angular-action-sheet.js",
   "scripts": {
