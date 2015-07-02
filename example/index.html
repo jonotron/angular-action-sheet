@@ -33,6 +33,10 @@
 
       <button ng-click="toggleNested = !toggleNested" type="button">Show nested</button>
 
+      <div style="height: 2000px; width: 100px; border: 1px solid black; background-color: yellow;">
+        inside is scrollable
+      </div>
+
       <jb-action-sheet reveal="toggleNested" on-close="toggleNested = false">
         <h2>A nested sheet</h2>
       </jb-action-sheet>
