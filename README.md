@@ -36,10 +36,31 @@ You'll probably want the styles too (for now, just .scss is provided)
 Just use the `jb-action-sheet` directive somewhere and add your content:
 
 ```html
-<jb-action-sheet reveal="someboolean" on-close="callWhenClosed()" size="'big'">
+<jb-action-sheet reveal="someboolean" on-close="callWhenClosed()">
   <div>your content here</div>
 </jb-action-sheet>
 ```
+
+If you want to create custom sheet sizes, just define some styles like this:
+
+```css
+.big > .jbas-sheet {
+  width: 80%;
+}
+
+.med > .jbas-sheet {
+  width: 50%;
+}
+```
+
+then include the class on the `jb-action-sheet` directive like this:
+
+```html
+<jb-action-sheet class="big"></jb-action-sheet>
+```
+
+**Optionally**: you can use the included `dist/sizes.css` which provides
+`.jbas-sheet--big`, `.jbas-sheet--med`, `.jbas-sheet--small`.
 
 **Note**: Currently this directive hacks a `.jbas-clipped` class to the body when
 the sheet is in the revealed state. This will be fixed sometime to be less
