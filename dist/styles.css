@@ -41,15 +41,6 @@
   -o-transition: right 0.3s;
   transition: right 0.3s; }
 
-.jbas-sheet--big {
-  width: 80%; }
-
-.jbas-sheet--med {
-  width: 50%; }
-
-.jbas-sheet--small {
-  width: 25%; }
-
 .jbas-sheet--hidden {
   right: -100%; }
 

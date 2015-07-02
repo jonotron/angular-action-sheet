@@ -11,11 +11,10 @@ function jbActionSheetDirective($document) {
     transclude: true,
     scope: {
       close: '&onClose',
-      reveal: '=reveal',
-      size: '='
+      reveal: '=reveal'
     },
     template: '<div class="jbas-mask" ng-class="reveal ? \'jbas-mask--revealed\' : \'jbas-mask--hidden\'"></div>' +
-      '<div class="jbas-sheet jbas-sheet--{{ size }}" ng-class="reveal ? \'jbas-sheet--revealed\' : \'jbas-sheet--hidden\'">' +
+      '<div class="jbas-sheet" ng-class="reveal ? \'jbas-sheet--revealed\' : \'jbas-sheet--hidden\'">' +
       '<button type="button" class="jbas-sheet__close" ng-click="sheet.close()">X</button>' +
       '<div class="jbas-sheet__restrict-y"><div class="jbas-sheet__restrict-x">' +
       '<ng-transclude></ng-transclude>' +
