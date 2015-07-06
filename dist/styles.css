@@ -31,7 +31,7 @@
   height: 100%;
   z-index: 1001;
   background: #FCFBF0;
-  position: absolute;
+  position: fixed;
   width: 25%;
   top: 0;
   right: -100%;
