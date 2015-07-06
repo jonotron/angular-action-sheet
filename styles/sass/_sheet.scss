@@ -28,7 +28,8 @@
 
 .jbas-sheet__restrict-y {
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .jbas-sheet__restrict-x {
