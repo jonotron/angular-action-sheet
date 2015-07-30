@@ -13,7 +13,7 @@ function jbActionSheetDirective($document) {
       close: '&onClose',
       reveal: '=reveal'
     },
-    template: '<div class="jbas-mask" ng-class="reveal ? \'jbas-mask--revealed\' : \'jbas-mask--hidden\'"></div>' +
+    template: '<div class="jbas-mask" ng-click="sheet.close()" ng-class="reveal ? \'jbas-mask--revealed\' : \'jbas-mask--hidden\'"></div>' +
       '<div class="jbas-sheet" ng-class="reveal ? \'jbas-sheet--revealed\' : \'jbas-sheet--hidden\'">' +
       '<button type="button" class="jbas-sheet__close" ng-click="sheet.close()">X</button>' +
       '<div class="jbas-sheet__restrict-y"><div class="jbas-sheet__restrict-x">' +
@@ -30,6 +30,12 @@ function jbActionSheetDirective($document) {
   }
 
   function controller ($scope) {
+    $document.bind('keydown', function(e) {
+      if (e.charCode === 27 || e.keyCode === 27) {
+        $scope.close();
+      }
+    });
+
     var vm = this;
     vm.close = $scope.close;
 
