@@ -30,12 +30,6 @@ function jbActionSheetDirective($document) {
   }
 
   function controller ($scope) {
-    $document.bind('keydown', function(e) {
-      if (e.charCode === 27 || e.keyCode === 27) {
-        $scope.close();
-      }
-    });
-
     var vm = this;
     vm.close = $scope.close;
 
