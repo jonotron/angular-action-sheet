@@ -1,10 +1,10 @@
 angular
 .module('jbSlideyPane', [])
-.directive('jbSlideyPane', jbActionSheetDirective);
+.directive('jbSlideyPane', jbSlideyPaneDirective);
 
-function jbActionSheetDirective($document) {
-  // static array to keep track of sheets that are visible
-  var revealedSheets = [];
+function jbSlideyPaneDirective($document) {
+  // static array to keep track of panes that are visible
+  var revealedPanes = [];
 
   return {
     restrict: 'E',
@@ -15,14 +15,14 @@ function jbActionSheetDirective($document) {
     },
     template: '<div class="jbas-mask" ng-class="reveal ? \'jbas-mask--revealed\' : \'jbas-mask--hidden\'"></div>' +
       '<div class="jbas-sheet" ng-class="reveal ? \'jbas-sheet--revealed\' : \'jbas-sheet--hidden\'">' +
-      '<button type="button" class="jbas-sheet__close" ng-click="sheet.close()">X</button>' +
+      '<button type="button" class="jbas-sheet__close" ng-click="pane.close()">X</button>' +
       '<div class="jbas-sheet__restrict-y"><div class="jbas-sheet__restrict-x">' +
       '<ng-transclude></ng-transclude>' +
       '</div></div>' +
       '</div>',
     link: link,
     controller: controller,
-    controllerAs: 'sheet'
+    controllerAs: 'pane'
   }
 
   function link (scope, element, attr) {
@@ -37,14 +37,14 @@ function jbActionSheetDirective($document) {
   }
 
   function toggleBodyClipping (reveal, old, scope) {
-    var pos = revealedSheets.indexOf(scope);
+    var pos = revealedPanes.indexOf(scope);
     if (reveal && pos === -1) {  
-      revealedSheets.push(scope);
+      revealedPanes.push(scope);
     } else if (!reveal && pos >= 0){
-      revealedSheets.splice(pos, 1);
+      revealedPanes.splice(pos, 1);
     }
 
-    angular.element($document[0].body).toggleClass('jbas-clipped', revealedSheets.length >= 1);
-    angular.element($document[0].body).toggleClass('jbas-unclipped', revealedSheets.length == 0);
+    angular.element($document[0].body).toggleClass('jbas-clipped', revealedPanes.length >= 1);
+    angular.element($document[0].body).toggleClass('jbas-unclipped', revealedPanes.length == 0);
   }
 }
