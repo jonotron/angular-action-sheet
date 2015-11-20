@@ -1,6 +1,6 @@
 {
-  "name": "angular-action-sheet",
-  "version": "0.1.3",
+  "name": "slidey-pane",
+  "version": "1.0.0",
   "description": "angular directive for sliding content out like a drawer",
   "main": "slidey-pane.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com//jonotron/angular-action-sheet.git"
+    "url": "https://github.com/jonotron/slidey-pane.git"
   },
   "keywords": [
     "angular"
