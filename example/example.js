@@ -1,1 +1,1 @@
-angular.module('ActionSheetExample', ['jbActionSheet']);
+angular.module('SlideyPaneExample', ['jbSlideyPane']);

@@ -1,6 +1,6 @@
 angular
-.module('jbActionSheet', [])
-.directive('jbActionSheet', jbActionSheetDirective);
+.module('jbSlideyPane', [])
+.directive('jbSlideyPane', jbActionSheetDirective);
 
 function jbActionSheetDirective($document) {
   // static array to keep track of sheets that are visible

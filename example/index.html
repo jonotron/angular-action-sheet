@@ -16,7 +16,7 @@
     <script src="../slidey-pane.js"></script>
   </head>
 
-  <body ng-app="ActionSheetExample">
+  <body ng-app="SlideyPaneExample">
     <button ng-click="toggleBig = !toggleBig" type="button">Big Sheet</button>
     <button ng-click="toggleMed = !toggleMed" type="button">Med Sheet</button>
     <button ng-click="toggleSmall = !toggleSmall" type="button">Small Sheet</button>
@@ -26,7 +26,7 @@
     </div>
 
 
-    <jb-action-sheet reveal="toggleBig" on-close="toggleBig = false" class="jbas-sheet--big">
+    <jb-slidey-pane reveal="toggleBig" on-close="toggleBig = false" class="jbas-sheet--big">
       <h1>Big sheet</h1>
 
       <p>This is an example of a big sheet</p>
@@ -39,17 +39,17 @@
         inside is scrollable
       </div>
 
-      <jb-action-sheet reveal="toggleNested" on-close="toggleNested = false">
+      <jb-slidey-pane reveal="toggleNested" on-close="toggleNested = false">
         <h2>A nested sheet</h2>
-      </jb-action-sheet>
-    </jb-action-sheet>
+      </jb-slidey-pane>
+    </jb-slidey-pane>
 
-    <jb-action-sheet reveal="toggleMed" on-close="toggleMed = false" class="jbas-sheet--med">
+    <jb-slidey-pane reveal="toggleMed" on-close="toggleMed = false" class="jbas-sheet--med">
       <h1>Medium Sheet</h1>
-    </jb-action-sheet>
+    </jb-slidey-pane>
 
-    <jb-action-sheet reveal="toggleSmall" on-close="toggleSmall = false" class="jbas-sheet--small">
+    <jb-slidey-pane reveal="toggleSmall" on-close="toggleSmall = false" class="jbas-sheet--small">
       <h1>Small Sheet</h1>
-    </jb-action-sheet>
+    </jb-slidey-pane>
   </body>
 </html>
