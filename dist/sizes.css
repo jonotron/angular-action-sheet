@@ -1,8 +1,8 @@
-.jbas-sheet--big > .jbas-sheet {
+.jbsp-pane--big > .jbsp-pane {
   width: 80%; }
 
-.jbas-sheet--med > .jbas-sheet {
+.jbsp-pane--med > .jbsp-pane {
   width: 50%; }
 
-.jbas-sheet--small > .jbas-sheet {
+.jbsp-pane--small > .jbsp-pane {
   width: 25%; }

@@ -1,4 +1,4 @@
-.jbas-sheet {
+.jbsp-pane {
   height: 100%;
   z-index: 1001; 
   background: #FCFBF0;
@@ -16,28 +16,28 @@
   transition: right 0.3s;
 }
 
-.jbas-sheet--hidden {
+.jbsp-pane--hidden {
   // If we set the right to -100% it guarantees sliding it out of view
   // but may not play nicely with animation easing
   right: -100%;
 }
 
-.jbas-sheet--revealed {
+.jbsp-pane--revealed {
   right: 0
 }
 
-.jbas-sheet__restrict-y {
+.jbsp-pane__restrict-y {
   height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-.jbas-sheet__restrict-x {
+.jbsp-pane__restrict-x {
   width: 100%;
   overflow-x: hidden;
 }
 
-.jbas-sheet__close {
+.jbsp-pane__close {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -45,7 +45,7 @@
   top: 0;
 }
 
-body.jbas-clipped {
+body.jbsp-clipped {
   overflow: hidden;
   height: 100%;
   width: 100%;

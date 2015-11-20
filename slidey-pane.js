@@ -13,10 +13,10 @@ function jbSlideyPaneDirective($document) {
       close: '&onClose',
       reveal: '=reveal'
     },
-    template: '<div class="jbas-mask" ng-class="reveal ? \'jbas-mask--revealed\' : \'jbas-mask--hidden\'"></div>' +
-      '<div class="jbas-sheet" ng-class="reveal ? \'jbas-sheet--revealed\' : \'jbas-sheet--hidden\'">' +
-      '<button type="button" class="jbas-sheet__close" ng-click="pane.close()">X</button>' +
-      '<div class="jbas-sheet__restrict-y"><div class="jbas-sheet__restrict-x">' +
+    template: '<div class="jbsp-mask" ng-class="reveal ? \'jbsp-mask--revealed\' : \'jbsp-mask--hidden\'"></div>' +
+      '<div class="jbsp-pane" ng-class="reveal ? \'jbsp-pane--revealed\' : \'jbsp-pane--hidden\'">' +
+      '<button type="button" class="jbsp-pane__close" ng-click="pane.close()">X</button>' +
+      '<div class="jbsp-pane__restrict-y"><div class="jbsp-pane__restrict-x">' +
       '<ng-transclude></ng-transclude>' +
       '</div></div>' +
       '</div>',
@@ -44,7 +44,7 @@ function jbSlideyPaneDirective($document) {
       revealedPanes.splice(pos, 1);
     }
 
-    angular.element($document[0].body).toggleClass('jbas-clipped', revealedPanes.length >= 1);
-    angular.element($document[0].body).toggleClass('jbas-unclipped', revealedPanes.length == 0);
+    angular.element($document[0].body).toggleClass('jbsp-clipped', revealedPanes.length >= 1);
+    angular.element($document[0].body).toggleClass('jbsp-unclipped', revealedPanes.length == 0);
   }
 }
