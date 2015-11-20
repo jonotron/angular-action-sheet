@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-    <title>Action Sheet Demo</title>
+    <title>Slidey Pane Demo</title>
 
     <link rel="stylesheet" href="../dist/styles.css" />
 
@@ -17,9 +17,9 @@
   </head>
 
   <body ng-app="SlideyPaneExample">
-    <button ng-click="toggleBig = !toggleBig" type="button">Big Sheet</button>
-    <button ng-click="toggleMed = !toggleMed" type="button">Med Sheet</button>
-    <button ng-click="toggleSmall = !toggleSmall" type="button">Small Sheet</button>
+    <button ng-click="toggleBig = !toggleBig" type="button">Big Pane</button>
+    <button ng-click="toggleMed = !toggleMed" type="button">Med Pane</button>
+    <button ng-click="toggleSmall = !toggleSmall" type="button">Small Pane</button>
 
     <div style="height: 2000px; width: 100px; border: 1px solid black; background-color: yellow;">
       Big div to test scrolling
@@ -27,11 +27,11 @@
 
 
     <jb-slidey-pane reveal="toggleBig" on-close="toggleBig = false" class="jbsp-pane--big">
-      <h1>Big sheet</h1>
+      <h1>Big Pane</h1>
 
-      <p>This is an example of a big sheet</p>
+      <p>This is an example of a big pane</p>
 
-      <p>It can have a nested sheet</p>
+      <p>It can have a nested pane</p>
 
       <button ng-click="toggleNested = !toggleNested" type="button">Show nested</button>
 
@@ -40,16 +40,16 @@
       </div>
 
       <jb-slidey-pane reveal="toggleNested" on-close="toggleNested = false">
-        <h2>A nested sheet</h2>
+        <h2>A nested pane</h2>
       </jb-slidey-pane>
     </jb-slidey-pane>
 
     <jb-slidey-pane reveal="toggleMed" on-close="toggleMed = false" class="jbsp-pane--med">
-      <h1>Medium Sheet</h1>
+      <h1>Medium Pane</h1>
     </jb-slidey-pane>
 
-    <jb-slidey-pane reveal="toggleSmall" on-close="toggleSmall = false" class="jbsp-pane--small">
-      <h1>Small Sheet</h1>
+    <jb-slidey-pane reveal="toggleSmall" on-close="toggleSmall = false" class="jbsp-sheet--small">
+      <h1>Small Pane</h1>
     </jb-slidey-pane>
   </body>
 </html>
