@@ -27,6 +27,7 @@ function jbSlideyPaneDirective($document) {
 
   function link (scope, element, attr) {
     scope.$watch('reveal', toggleBodyClipping);
+    scope.$on('$destroy', listenDestroy);
   }
 
   function controller ($scope) {
@@ -36,14 +37,30 @@ function jbSlideyPaneDirective($document) {
     return vm;
   }
 
+  function listenDestroy (opts) {
+    var pos = revealedPanes.indexOf(opts.currentScope.$id);
+    if (pos >= 0) {
+      revealedPanes.splice(pos, 1); 
+    }
+
+    updateClip();
+  }
+
   function toggleBodyClipping (reveal, old, scope) {
-    var pos = revealedPanes.indexOf(scope);
+    var id = scope.$id;
+    var pos = revealedPanes.indexOf(id);
     if (reveal && pos === -1) {  
-      revealedPanes.push(scope);
+      // we want to reveal a brand new pane (not already revealed)
+      revealedPanes.push(id);
     } else if (!reveal && pos >= 0){
+      // we want to hide a pane that is already revealed
       revealedPanes.splice(pos, 1);
     }
 
+    updateClip();
+  }
+
+  function updateClip () {
     angular.element($document[0].body).toggleClass('jbsp-clipped', revealedPanes.length >= 1);
     angular.element($document[0].body).toggleClass('jbsp-unclipped', revealedPanes.length == 0);
   }
