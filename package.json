@@ -1,6 +1,6 @@
 {
   "name": "slidey-pane",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "angular directive for sliding content out like a drawer",
   "main": "slidey-pane.js",
   "scripts": {
